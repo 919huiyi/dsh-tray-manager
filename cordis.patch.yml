@@ -1,0 +1,11 @@
+# dsh-tray-manager bundle patch: inserts the host row into the profile's
+# plugin roster. The browser half rides the package's `dsh.client` manifest
+# (the client registry serves lib/client.js), and this row materializes the
+# tray-manager host plugin on boot.
+# Install with `dsh plugin --profile <name> add <path-or-git-url>`; the bundle
+# patch is applied automatically (the package declares dsh.bundle.patch, so
+# `dsh plugin add` also appends it to dsh.profile.bundles), so do NOT insert
+# this row again in the profile patch (duplicate ids crash the loader).
+- insert:
+    - id: dsh-tray-manager
+      name: 'dsh-tray-manager'

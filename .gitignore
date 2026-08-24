@@ -1,0 +1,6 @@
+node_modules/
+*.log
+.DS_Store
+# 运行时产物（托盘/插件自动重建）
+dsh-tray-settings.json
+dsh-tray.log
